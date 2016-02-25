@@ -1,0 +1,13 @@
+<form>
+  <div class="form-group">
+    <label for="title">Title</label>
+    {{input value=title class="form-control" id="title"}}
+    <label for="author">Author</label>
+    {{input value=author class="form-control" id="author"}}
+    <label for="headerImage">Image URL</label>
+    {{input value=headerImage class="form-control" id="headerImage"}}
+    <label for="body">Content</label>
+    {{froala-editor params=froalaEditor.params value=body id="body"}}
+  </div>
+  <button class="btn btn-default" {{action "savePost"}}>Create Post</button>
+</form>

@@ -1,0 +1,24 @@
+<div class="col-md-10 col-center">
+  <h1 class="post-title">{{model.title}}</h1>
+  <h3 class=post-author>By: {{model.author}}</h3>
+  <img class="post-image" src={{model.headerImage}}/>
+  <div class="post-body">
+    {{{model.body}}}
+  </div>
+  <hr>
+  <h4>Comments:</h4>
+  <div class="comments">
+    {{#each model.comments as |comment|}}
+      {{single-comment comment=comment}}
+    {{/each}}
+    {{#if session.isAuthenticated}}
+      {{new-comment saveComment="saveComment" post=model}}
+    {{else}}
+      {{#link-to 'sign-in'}}
+        <button class="btn btn-success btn-block">
+          Sign in to comment
+        </button>
+      {{/link-to}}
+    {{/if}}
+  </div>
+</div>

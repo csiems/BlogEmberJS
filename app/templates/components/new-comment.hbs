@@ -1,0 +1,11 @@
+<form>
+  <div class="form-group">
+    <label for="title">Title</label>
+    {{input value=title id="title" class="form-control"}}
+    <label for="author">Author</label>
+    {{input value=author id="author" class="form-control"}}
+    <label for="body">Comment</label>
+    {{froala-editor params=froalaEditor.params value=body id="body" required="true"}}
+  </div>
+  <button class="btn btn-block btn-default comment-submit" {{action "saveComment"}}>Submit Comment</button>
+</form>

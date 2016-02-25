@@ -1,0 +1,17 @@
+<div class="comment">
+  <h4><strong>{{{comment.title}}}</strong></h4>
+  <div class="body">
+    {{{comment.body}}}
+  </div>
+  <div class="comment-info">
+    <div class="author">
+      By: {{comment.author}}
+    </div>
+    <div class="score">
+      <button {{action "updateLikes" comment}}><i class="fa fa-like fa-thumbs-o-up"></i></button>
+      <span>{{comment.likes}}</span>
+      <button {{action "updateDislikes" comment}}><i class="fa fa-like fa-thumbs-o-down"></i></button>
+      <span>{{comment.dislikes}}</span>
+    </div>
+  </div>
+</div>
