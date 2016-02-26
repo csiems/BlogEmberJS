@@ -5,7 +5,6 @@ export default Ember.Component.extend({
     saveComment() {
       var params = {
         post: this.get('post'),
-        author: this.get('author'),
         body: $(".fr-element").html(),
         title: this.get('title') || $(".fr-element").html().slice(0,30),
         likes: 0,

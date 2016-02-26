@@ -4,14 +4,30 @@
 {{input
     type='text'
     class='form-control'
+    value=firstName
+    placeholder='firstName'
+    required="true"
+}}
+{{input
+    type='text'
+    class='form-control'
+    value=lastName
+    placeholder='lastName'
+    required="true"
+}}
+{{input
+    type='text'
+    class='form-control'
     value=email
     placeholder='email'
+    required="true"
 }}
 {{input
     type='password'
     class='form-control'
     value=password
     placeholder='password'
+    required="true"
 }}
 <button class='btn btn-default' {{action 'signUp'}}>
     {{fa-icon 'user-plus'}} Sign Up

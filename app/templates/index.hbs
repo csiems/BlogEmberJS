@@ -1,3 +1,6 @@
+{{#if session.isAuthenticated}}
+  <p class="user-alert alert alert-success">Welcome <strong>{{model.user.firstName}}</strong>!</p>
+{{/if}}
 {{#each model.posts as |post|}}
   {{post-tile post=post}}
 {{/each}}

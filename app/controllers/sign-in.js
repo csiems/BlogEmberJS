@@ -9,6 +9,7 @@ export default Ember.Controller.extend({
         email: this.get('email') || '',
         password: this.get('password') || '',
       }).then(() => {
+        flashMessages.success('Welcome!');
         controller.set('email', null);
         controller.set('password', null);
         controller.transitionToRoute('index');
